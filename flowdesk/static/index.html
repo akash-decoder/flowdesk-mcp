@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Flowdesk · Workflow editor</title><link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script></head>
+<body>
+<header><a href="/" class="brand"><span class="mark" aria-hidden="true">ƒ</span> Flowdesk</a><span class="local">Local workspace</span></header>
+<div class="layout"><aside aria-label="Workflow library"><h2>Workspace</h2><button id="new">＋ New workflow</button><nav id="library" aria-label="Saved workflows"></nav></aside>
+<main><div class="eyebrow">AUTOMATION STUDIO</div><div class="titlebar"><h1 id="title">Lead intake</h1><button class="primary" id="save">Save workflow</button></div>
+<p id="status" role="status">Draft</p>
+<nav class="tabs" aria-label="Workflow views"><button data-tab="editor" aria-pressed="true">Editor</button><button data-tab="runs">Run history</button><button data-tab="records">Records</button><button data-tab="deliveries">Deliveries</button></nav>
+<section id="editor" class="grid"><section class="canvas" aria-label="Workflow steps"><div class="canvashead"><h2>Workflow steps</h2><span id="count"></span></div><div class="nodes"><div class="trigger"><span class="tile">↳</span><div><small>TRIGGER</small><strong>Receive event</strong></div></div><div id="steps"></div><button id="add">＋ Add step</button></div></section>
+<section class="inspector"><h2>Configuration</h2><label>Workflow name<input id="name" maxlength="100"></label><div id="fields"></div><hr><h2>Test input</h2><label>JSON payload<textarea id="payload" rows="5" spellcheck="false">{"name":"Alex","service":"website"}</textarea></label><div class="buttons"><button id="preview">Preview</button><button id="run">Run now</button></div><pre id="result" hidden></pre><details><summary>Inbound webhook</summary><p>Save the workflow to generate a URL and key for your event sender.</p><button id="hook">Show connection details</button><pre id="connection" hidden></pre></details></section></section>
+<section id="activity" hidden><div class="canvashead"><h2 id="activityTitle"></h2><button id="refresh">Refresh</button></div><div id="items"></div></section>
+</main></div></body></html>
